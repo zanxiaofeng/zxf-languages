@@ -29,7 +29,9 @@
 	+ Return语句是可选的
 	+ 方法和类默认Public
 	+ 分号；是可选的
-	+ 类型是可选的，自动推断
+	+ 类型是可选的，可以很模糊或很精确
+	+ 类型前置
+	+ 动态派发
 	+ 具名参数初始化JavaBean
 	+ 静态方法内可以使用this来指代Class对象
 	+ 支持可选参数-Default Value
@@ -37,6 +39,10 @@
 	+ def用于定义方法，属性和局部变量
 	+ in用于在for循环中指定循环区间
 	+ it是单参数闭包中的参数默认名称
+
+# 语言陷阱
+	+ Groovy的==等价于Java的euqals
+	+ 
 
 
 # 语法特点
@@ -72,6 +78,9 @@
 			- “${foo.bar} is a test”
 	### 枚举
 
+	### 数组
+
+
 ## 集合类型
 	### List
 	### Map
@@ -90,6 +99,8 @@
   		+ Matcher至少有一个匹配
   		+ Object[]长度大于0
   		+ 其他任何类型引用不为null
+  	### 操作符
+  		+ ==
   	### 操作符重载
   		+ 每个操作符对会映射到一个标准方法，在Java中按名使用方法，在Groovy中既可以按名使用方法或者使用操作符
 
@@ -146,6 +157,15 @@
   ## 泛型
 
   ## 注解
+  	### Groovy的代码生成变换
+  		+ @Canonical - 生成默认的ToString方法
+  		+ @Delegate - 
+  		+ @Immutable - 不可变对象类
+  		+ @Lazy - 
+  		+ @Newify
+  		+ @Singleton
+
+
 
   	
   ## 包
@@ -161,6 +181,8 @@
       + groovy.lang
       + groovy.util
     ### 静态导入
+    	+ Groovy在静态导入方法和类时可以指定别名，import <static-mothod or class> as <Alias>
+    	
 # GDK
  ## Object类的扩展
  ## java.lang的扩展
